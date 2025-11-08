@@ -1,0 +1,71 @@
+/* responsive */
+@media (max-width: 990px) {
+    header {
+      padding: 10px 20px;
+    }
+    header nav {
+      position: absolute;
+      width: 100%;
+      top: var(--header-height);
+      left: 0;
+      background: #454545;
+      display: none;
+    }
+    header.active nav {
+      display: initial;
+    }
+    header nav ul li {
+      width: 100%;
+    }
+    header nav ul li ul {
+      position: relative;
+      width: 100%;
+      left: 0;
+    }
+    header ul li ul li .submenu {
+      left: 0;
+    }
+    .menuToggle {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #be8b63;
+    }
+    .menuToggle::before {
+      content: '';
+      position: absolute;
+      width: 80%;
+      height: 2px;
+      background: #fff;
+      transform: translateY(-12px);
+      box-shadow: 0 12px #fff;
+    }
+     .menuToggle::after {
+      content: '';
+      position: absolute;
+      width: 80%;
+      height: 2px;
+      background: #fff;
+      transform: translateY(12px);
+    }
+    header.active .menuToggle::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+    header.active .menuToggle::after {
+      transform: rotate(315deg);
+    }
+    /* .service-card {
+      position: absolute;
+
+  } */
+  .service-c {
+    margin-top: 20px;
+}
+.service-contact {
+  margin-top: 20px;
+}
+  }
